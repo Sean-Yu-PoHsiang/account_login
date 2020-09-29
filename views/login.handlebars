@@ -1,0 +1,23 @@
+<div class="container d-flex flex-column align-items-center">
+  <h1 class="mt-5">Account Login</h1>
+  <form class="w-50" action="/" method="POST">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email"
+        value="{{email}}">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+    </div>
+    <div class="d-flex justify-content-center mt-5">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+
+  <h2 class="mt-5 btn-danger">
+    {{#if accountWrong}}account doesn't exist{{/if}}
+    {{#if passwordWrong}}wrong password{{/if}}</h2>
+
+</div>
