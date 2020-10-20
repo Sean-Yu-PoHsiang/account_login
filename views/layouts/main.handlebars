@@ -12,6 +12,9 @@
 <body>
   <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand mb-0 h1" href="/">Home page</a>
+    {{#if isLogin}}
+    <a class="btn btn-outline-secondary" href="/logout">Log out</a>
+    {{/if}}
   </nav>
 
   {{{ body }}}
